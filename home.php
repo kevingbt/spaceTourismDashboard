@@ -40,7 +40,7 @@ switch ($_SESSION['is_admin']) {
 <body>
     <div class="header">
         <h1>Space Tourism</h1>
-        <a href="./logout.php">Se déconnecter</a>
+        <a href="./logout.php" class="btn">Se déconnecter</a>
     </div>
     <div class="pageContainer">
         <h1>Votre compte</h1>

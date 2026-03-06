@@ -31,7 +31,7 @@ $resultProduct = $dbProduct->fetchAllProduct();
 <body>
     <div class="header">
         <h1>Space Tourism</h1>
-        <a href="index.php">Revenir à la présentation des voyages</a>
+        <a href="index.php" class="btn">Revenir à la présentation des voyages</a>
     </div>
     <div class="container">
         <h3>Connexion</h3>

@@ -1,6 +1,7 @@
 # Space Tourism Dashboard
 
 Bienvenue sur le tableau de bord de l'application **Space Tourism**. Ce projet permet de gérer une agence de voyage spatial, incluant la création de destinations et la gestion des réservations clients.
+La racine de mon projet est le fichier initial, l'index.php est donc accessible à cet url : http://127.0.0.1:`[port]`/ .
 
 ## Fonctionnalités
 

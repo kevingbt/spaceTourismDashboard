@@ -16,7 +16,7 @@ $result = $db->fetchAllProduct();
 <body>
     <div class="header">
         <h1>Space Tourism</h1>
-        <a href="login.php">Se connecter/S'inscrire</a>
+        <a href="login.php" class="btn">Se connecter/S'inscrire</a>
     </div>
     <div class="indexContainer">
         <h1>Vous souhaitez réserver votre prochain voyage spatial ? </h1>
