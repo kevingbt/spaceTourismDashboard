@@ -37,6 +37,7 @@ $participants = $dbReservation->fetchParticipants($id);
     </div>
     <div class="adminContainer">
         <h1>Dashboard Voyage</h1>
+        <hr>
         <div class="info">
             <h3>Destination : <?= $result->name; ?></h3>
             <h3>Description : <?= $result->illustration; ?></h3>
@@ -56,10 +57,15 @@ $participants = $dbReservation->fetchParticipants($id);
                 <button type="submit">modifier</button>
             </form>
             <h3>Supprimer le voyage</h3>
-            <form action="/handle_delete_product.php" method="post">
-                <input type="hidden" name="id" value=<?= $result->id; ?>>
-                <button type="submit">supprimer</button>
-            </form>
+            <?php if (empty($participants)){ ?>
+                <form action="/handle_delete_product.php" method="post">
+                    <input type="hidden" name="id" value=<?= $result->id; ?>>
+                    <button type="submit">supprimer</button>
+                </form>
+            <?php } else { ?>
+                <p>Vous ne pouvez pas supprimer ce voyage car des réservations existent.</p>
+            <?php } ?>
+
         </div>
         <hr>
         <h2>Liste des participants</h2>

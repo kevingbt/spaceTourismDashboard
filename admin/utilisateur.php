@@ -44,6 +44,7 @@ $reservation = $dbReservation->fetchVoyage($id);
     </div>
     <div class="adminContainer">
         <h1>Dashboard Utilisateur</h1>
+        <hr>
         <h3>Email : <?= $result->email; ?></h3>
         <h3>Admin : <?= $isAdmin; ?></h3>
         <div>
@@ -62,11 +63,15 @@ $reservation = $dbReservation->fetchVoyage($id);
             if ($result->is_admin) {
             } else {
             ?>
-                <h3>Supprimer l'utilisateur</h3>
-                <form action="/handle_delete_user.php" method="post">
+            <h3>Supprimer l'utilisateur</h3>
+                <?php if (empty($reservation)) { ?>
+                    <form action="/handle_delete_user.php" method="post">
                     <input type="hidden" name="id" value=<?= $result->id; ?>>
                     <button type="submit">supprimer</button>
                 </form>
+                <?php } else { ?>
+                    <p>Vous ne pouvez pas supprimer cet utilisateur car il a réservé des voyages.</p>
+                <?php } ?>
             <?php
             }
             ?>
